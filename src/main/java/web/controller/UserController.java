@@ -45,7 +45,7 @@ public class UserController {
 
     // 4) СОЗДАТЬ ЮЗЕРА
     @GetMapping("/new")
-    public String neweUser(@ModelAttribute("user") User user) {
+    public String newUser(@ModelAttribute("user") User user) {
         return "new";
     }
 
