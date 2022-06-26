@@ -16,7 +16,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    // 1) ВСЕ ЮЗЕРЫ
+//     1) ВСЕ ЮЗЕРЫ
     @GetMapping(value = "/users")
     public String getAllUser(Model model) {
         model.addAttribute("users", userService.getAllUser());

@@ -8,8 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
-//@Repository
-@Component
+@Repository
+//@Component
 public class UserDAOImpl implements UserDAO {
 
     @PersistenceContext
