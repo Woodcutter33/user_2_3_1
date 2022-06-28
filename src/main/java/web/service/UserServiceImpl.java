@@ -9,8 +9,8 @@ import web.dao.UserDAO;
 import web.model.User;
 
 import java.util.List;
+
 @Service
-//@Component
 public class UserServiceImpl implements UserService {
 
     private UserDAO userDAO;
@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl(UserDAO userDAO) {
         this.userDAO = userDAO;
     }
-
 
     @Override
     @Transactional

@@ -16,14 +16,12 @@ public class UserController {
         this.userService = userService;
     }
 
-//     1) ВСЕ ЮЗЕРЫ
     @GetMapping(value = "/users")
     public String getAllUser(Model model) {
         model.addAttribute("users", userService.getAllUser());
         return "users";
     }
 
-    // 2) РЕДАКТИРОВАТЬ ЮЗЕРА
     @GetMapping("/edit/{id}")
     public String editUser(Model model, @PathVariable("id") int id) {
         model.addAttribute("user", userService.getUser(id));
@@ -36,14 +34,12 @@ public class UserController {
         return "redirect:/users";
     }
 
-    // 3) ПОКАЗАТЬ ЮЗЕРА
     @GetMapping("/{id}")
     public String getUser(Model model, @PathVariable("id") int id) {
         model.addAttribute("user", userService.getUser(id));
         return "user";
     }
 
-    // 4) СОЗДАТЬ ЮЗЕРА
     @GetMapping("/new")
     public String newUser(@ModelAttribute("user") User user) {
         return "new";
@@ -55,7 +51,6 @@ public class UserController {
         return "redirect:/users";
     }
 
-    // 5) УДАЛИТЬ ЮЗЕРА
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable("id") int id) {
         userService.deleteUser(id);

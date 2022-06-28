@@ -48,6 +48,7 @@ public class AppConfig {
         props.setProperty("hibernate.hbm2ddl.auto", "create");
         props.setProperty("hibernate.dialect", "org.hibernate.dialect.MariaDBDialect");
         props.setProperty("characterEncoding", "UTF-8");
+        props.setProperty("hibernate.connection.useUnicode", "true");
         return props;
     }
 

@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-//@Component
 public class UserDAOImpl implements UserDAO {
 
     @PersistenceContext
