@@ -45,14 +45,9 @@ public class AppConfig {
     public Properties getProperties() {
         Properties props = new Properties();
         props.put("hibernate.show_sql", environment.getProperty("hibernate.show_sql"));
-//        props.put("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.show_sql", "create"));
         props.setProperty("hibernate.hbm2ddl.auto", "create");
         props.setProperty("hibernate.dialect", "org.hibernate.dialect.MariaDBDialect");
-//        props.getProperty("hibernate.hbm2ddl.auto", "create");
-//        props = (Properties) getProperties().setProperty("hibernate.hbm2ddl.auto", "create");
-//        props.put(AvailableSettings.HBM2DDL_AUTO, SchemaAutoTooling.CREATE.name().toLowerCase());
-//        props.put("hibernate.hbm2ddl.auto", "create");
-//        props.put("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
+        props.setProperty("characterEncoding", "UTF-8");
         return props;
     }
 
